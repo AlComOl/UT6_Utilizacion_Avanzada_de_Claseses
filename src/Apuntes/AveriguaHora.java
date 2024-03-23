@@ -18,15 +18,16 @@ public class AveriguaHora {
 		int contador=0;
 		boolean acertado=false;
 		
-		Date h = new Date();
-		String horaMinSeg= DateFormat.getTimeInstance().format(h);
+		Date h = new Date();//instanciamos un obgeto de tipo date 
+		String horaMinSeg= DateFormat.getTimeInstance().format(h);//obtenemos la hora actual en una cadena de texto en formato hh:mm:ss
 		System.out.println(horaMinSeg);
 		int [] fechaInt=new int [3];
+//		separamos el String por medio de split , separando por :
 		String[] fechaV=horaMinSeg.split(":");
 		int hora = 0,min = 0,seg = 0;
 		
-		for(int i=0;i<fechaInt.length;i++) {
-			fechaInt[i]=Integer.parseInt(fechaV[i]);
+		for(int i=0;i<fechaInt.length;i++) {//iteramos en el vector
+			fechaInt[i]=Integer.parseInt(fechaV[i]);//pasando a entero los elementos(String) en el otro vector de enteros.
 		}
 	
 		
@@ -42,7 +43,7 @@ public class AveriguaHora {
 		
 		
 		
-
+//comparamos el entero introducido con la posición del vector con la hora instanciada del sistema.
 //	Si horas minutos y segundos son iguales 
 		
 		if (hora == fechaInt[0]) {

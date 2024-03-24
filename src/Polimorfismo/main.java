@@ -6,7 +6,7 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		B[] bs=new B[2];
+		B[] bs=new B[3];
 		
 		bs[0]=new B();
 		bs[1]=new A();

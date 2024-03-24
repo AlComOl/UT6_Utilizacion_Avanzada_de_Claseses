@@ -4,7 +4,7 @@ public class usoEmpleado {
 
 	public static void main(String[] args) {
 		
-		Jefatura jefe_Proyect=new Jefatura("Alvaro",40000,2026,9,15);
+		Jefatura jefe_Proyect=new Jefatura("Andres",40000,2026,9,15);
 		
 		jefe_Proyect.estableceIncentivo(2500);
 		

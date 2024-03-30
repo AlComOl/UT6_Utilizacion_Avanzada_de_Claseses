@@ -28,7 +28,13 @@ public class Prg_6_8 {
 	System.out.println(AnyosTiene(n));
 	}
 
-	
+	/****************************************************************************************
+	 * @descripcion obtenemos la fecha de hoy por medio de SimpleFormatDate
+	 * metiendo en cada posición del vector dia,mes,año metiendo en un vetor de strings
+	 * Convertimos los elementos del vector String a int con los wrappers, y despues comparamos
+	 * @param n el vector edad es la fecha de nacimiento introducida
+	 * @return edad 
+	 *******************************************************************************************/
 	public static int AnyosTiene(String n[]) {
 		int aInteger[]=new int[3];
 		int nInteger[]=new int[3];
@@ -41,7 +47,7 @@ public class Prg_6_8 {
 		for(int i=0;i<aInteger.length;i++) {
 			
 			 aInteger[i]=Integer.parseInt(a[i]);
-			 System.out.println("fecha " +aInteger[i]);
+			 
 		}
 		
 		
@@ -49,21 +55,25 @@ public class Prg_6_8 {
 			for(int i=0;i<n1.length;i++) {
 				
 				 nInteger[i]=Integer.parseInt(n1[i]);
-				 System.out.println("nacimiento "+nInteger[i]);	 
+				
 				
 			}
 		
 		
 		if(aInteger[2]>nInteger[2]) {
 			if(aInteger[1]>nInteger[1]) {
-				if(aInteger[0]>nInteger[0]) {
+				if(aInteger[0]>=nInteger[0]) {
 					edad=aInteger[2]-nInteger[2];
+				}else {
+					edad=(aInteger[2]-nInteger[2])-1;
+				}
+			}else {
+				edad=(aInteger[2]-nInteger[2])-1;
 			}
-		}
 			
 		}else {
-			edad=(aInteger[2]-nInteger[2])-1;
-		}
+			System.out.println("La edad es mayor que la fecha de nacimiento");
+			}
 	
 		
 	return edad;

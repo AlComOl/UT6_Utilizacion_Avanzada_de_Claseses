@@ -2,18 +2,21 @@ package Prg6_11;
 
 public class Rombo extends Forma{
 	
-	protected int identificador;
+	
+	
+	
+	
 
-	public Rombo(int identificador) {
-		super(identificador);
-		this.identificador=identificador;
+	public Rombo() {
+		super();
+		
 		
 	}
 
 	@Override
 	public String toString() {
 		
-		return "El identificador es "+ identificador;
+		return "El identificador del Rombo  es :"+ getIdentificador();
 	}
 	
 

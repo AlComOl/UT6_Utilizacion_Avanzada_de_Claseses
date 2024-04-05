@@ -1,16 +1,21 @@
 package Prg6_11;
 
 public class Cuadrado extends Forma{
+	
+	
+	
+	
 
-	public Cuadrado(int identificador) {
-		super(identificador);
+	public Cuadrado() {
+		super();
+		
 		
 	}
 
 	@Override
 	public String toString() {
 		
-		return "El identificador es"+identificador;
+		return "El identificador del Cuadrado es  "+getIdentificador();
 	}
 
 }

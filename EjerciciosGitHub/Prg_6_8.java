@@ -2,17 +2,7 @@
 import java.util.*;
 
 import java.text.SimpleDateFormat;
-/**********************************************************
- * @author Álvaro Comenge 
- * 
- * @Fecha 29/03/24
- * 
- * @descripcion
- * Realice una función que dada una fecha de nacimiento de
- * una persona indique cuántos años tiene.
- * 
- * 
- * *********************************************************/
+iu
 public class Prg_6_8 {
 
 	public static void main(String[] args) {

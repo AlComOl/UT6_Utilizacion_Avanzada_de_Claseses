@@ -16,11 +16,8 @@ public class Prg_6_17 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Introduce un numero real");
-		
+//		El tipo de dato es double por si es decimal el numero
 		double n=sc.nextDouble();
-		
-		
-		
 		
 		ultimaCifra(n);
 
@@ -29,13 +26,11 @@ public class Prg_6_17 {
 	
 	public static void ultimaCifra(double num) {
 		
-		Double wrapper= num;
+		Double wrapper= num;//creamos obgeto wrapper
 		
+		wrapper=wrapper%10;//le hacemos el resto para que quede la ultima cifra
 		
-		
-		wrapper=wrapper%10;
-		
-		
+		//por si el numero es decimal lo pasamos a entero para quitar lo de detras de la coma.
 		System.out.println(wrapper.intValue());
 	}
 

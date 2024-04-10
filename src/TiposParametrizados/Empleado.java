@@ -1,6 +1,6 @@
 package TiposParametrizados;
 
-public class Empleado implements EsComparable{
+public class Empleado implements EsComparable<Empleado>{
 	
 	private int sueldo;
 	
@@ -14,15 +14,15 @@ public class Empleado implements EsComparable{
 	}
 	
 	public String toString() {
-		return ;
+		return "Los sueldos son"+sueldo;
 	}
 	
-	public int compara (EsComparable c ){
-		// Comparación de este empleado con el que pasan
-		//Hay que hacer un cast de EsComparable a Empleado
-		Empleado e = (Empleado) c;
+	@Override
+	public int compara (Empleado c ){
+		int s=this.sueldo-c.sueldo;
 		
-		return 
+		
+		return s;
 		}
 
 }

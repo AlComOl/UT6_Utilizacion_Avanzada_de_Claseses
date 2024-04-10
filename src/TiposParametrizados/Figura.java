@@ -1,6 +1,6 @@
 package TiposParametrizados;
 
-public class Figura implements EsComparable{
+public class Figura implements EsComparable <Figura>{
 
 	private int lado;
 	
@@ -12,16 +12,16 @@ public class Figura implements EsComparable{
 	}
 	
 	public String toString() {
-		return ;
+		String d=" ";
+		return d;
 	}
 	
-	public int compara (EsComparable c ){
-		// Comparación de esta figura con la que pasan
-		//Hay que hacer un cast de EsComparable a Figura
-		Figura f = (Figura) c;
+	public int compara (Figura c ){//restar el dato con el objeto 
+		int s=(this.lado-c.lado);
 		
 		
-		return ;
+		
+		return s;
 		}
 		
 }

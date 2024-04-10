@@ -59,7 +59,7 @@ public class Prg_6_13 {
 			Random ramdom=new Random();
 			
 			int caraCruz=ramdom.nextInt(0,2);
-			System.out.println(caraCruz);
+			
 			
 			return caraCruz;
 		}

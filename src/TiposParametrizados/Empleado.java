@@ -19,7 +19,7 @@ public class Empleado implements EsComparable<Empleado>{
 	
 	@Override
 	public int compara (Empleado c ){
-		int s=this.sueldo-c.sueldo;
+		int s=(int)(this.sueldo-c.sueldo);
 		
 		
 		return s;

@@ -7,9 +7,9 @@ public class ArrayList {
 	private int i=0; 
 	
 	
-	public ArrayList(int z) {//constructor
+	public ArrayList(int posiciones) {//constructor
 		
-		datosElemento =new Object[z];
+		datosElemento =new Object[posiciones];
 	}
 	
 	public Object get(int i) {

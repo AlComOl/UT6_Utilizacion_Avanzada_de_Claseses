@@ -12,14 +12,12 @@ public class Figura implements EsComparable <Figura>{
 	}
 	
 	public String toString() {
-		String d=" ";
-		return d;
+		
+		return "los lados de la figura son :"+lado;
 	}
 	
 	public int compara (Figura c ){//restar el dato con el objeto 
-		int s=(this.lado-c.lado);
-		
-		
+		int s=(int)(this.lado-c.lado);
 		
 		return s;
 		}

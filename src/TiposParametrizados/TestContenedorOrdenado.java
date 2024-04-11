@@ -23,6 +23,8 @@ public class TestContenedorOrdenado {
 		nuevaFigura.inserta(f1);
 		nuevaFigura.inserta(f2);
 		
+	System.out.println(nuevaFigura.toString());
+		
 		
 		
 	}

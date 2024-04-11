@@ -1,5 +1,5 @@
 package TiposParametrizados;
-
+@SuppressWarnings("unchecked")
 
 
 public  class ContenedorOrdenado<T extends EsComparable <T>>{
@@ -9,15 +9,21 @@ public  class ContenedorOrdenado<T extends EsComparable <T>>{
 		
 		public ContenedorOrdenado() {
 			datos= (T[]) new EsComparable[10];
+			
 		}
 		
 		public void inserta (T d){
 		int i = 0 ;
-		while ((i<numEl) & (datos[i].compara(d)<0)) {
+		while ((i<numEl) && (datos[i].compara(d)<0)) {
 			i++;
 		}
-		
+		if (i<10) {
+			for (int j=numEl; j>i; j--) {
+				datos[j]=datos[j-1];
+			}
 		datos[i]=d;
+		numEl++;
+		}
 		}
 		public int compara(EsComparable c) {
 			

@@ -12,9 +12,9 @@ public  class ContenedorOrdenado<T extends EsComparable <T>>{
 			
 		}
 		
-		public void inserta (T d){
+		public void inserta (T d){//insertas el dato en la posicion que quieres para que este ordenado
 		int i = 0 ;
-		while ((i<numEl) && (datos[i].compara(d)<0)) {
+		while ((i<numEl) && (datos[i].compara(d)<0)) { //ver donde va a ir el numero que quiero meter
 			i++;
 		}
 		if (i<10) {

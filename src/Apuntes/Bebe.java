@@ -33,3 +33,7 @@ public class Bebe {
 	pedir(new String[]{"papa jugar", "mama me aburro", "papa sed", "papa dormir", "mama tengo hambre"}); 
 	} 
 	}
+
+
+
+

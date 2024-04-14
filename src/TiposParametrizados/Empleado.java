@@ -1,7 +1,14 @@
 package TiposParametrizados;
+/*************************
+ * @autor Álvaro Comenge 
+ * 
+ * @fecha 13/03/2024
+ * 
+ * Clase Empleado
+ *************************/
 
 public class Empleado implements EsComparable<Empleado>{
-//Empleado implementa la interface EsComparable y da tipo a los elementos que meteremos en 	el atrributo de la clase ContenedorOrdenado que hereda de la interface
+	
 	//La clase Empleado implementa la interfaz EsComparable<Empleado>. 
 	//Esto significa que Empleado proporciona una implementación para el método compara() 
 	//definido en la interfaz EsComparable, y los elementos de Empleado pueden ser utilizados 
@@ -17,13 +24,21 @@ public class Empleado implements EsComparable<Empleado>{
 		this.sueldo=sueldo;
 		
 	}
-//Metodo toString muestra el sueldo sobreescribe	
+/*************************************************
+ * Metodo toString muestra el sueldo 
+ * sobreescribe a toString 	
+ ***********************************************/
 	public String toString() {
 		return "Los sueldos ordenados son: "+sueldo;
 	}
-	//Este metodo compara es el que comentamos sobreescribe al metodo de la interface.
+	/*****************
+	 * Sobreescribe al metodo de la interface.
+	 * nos ayuda a oredenar los sueldos(lo utilizamos en contenededor ordenado para 
+	 * comparar los elementos del array)
+	 * @return devuelve 
+	 *********************/
 	@Override
-	public int compara (Empleado c ){//nos ayuda a oredenar los sueldos(lo utilizamos en contenededor ordenado para comparar los elementos del array)
+	public int compara (Empleado c ){
 		int s=(int)(this.sueldo-c.sueldo);
 		
 		

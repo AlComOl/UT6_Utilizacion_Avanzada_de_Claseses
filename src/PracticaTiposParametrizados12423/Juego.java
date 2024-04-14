@@ -40,14 +40,21 @@ public class Juego implements EsComparable<Juego> {
 	public boolean mayorQue(Juego t) {
 		boolean noMayor = true;
 		if(t.fechaPublicacion.getYear()>this.fechaPublicacion.getYear()) {
-			if(t.fechaPublicacion.getMonth()>this.fechaPublicacion.getMonth()) {
-				if(t.fechaPublicacion.getDay()>this.fechaPublicacion.getDay()) {
+			noMayor = false;
+		}else {
+			
+			if(t.fechaPublicacion.getYear()==this.fechaPublicacion.getYear()) {
+				if(t.fechaPublicacion.getMonth()>this.fechaPublicacion.getMonth()) {
 					noMayor = false;
+				}else {
+					if(t.fechaPublicacion.getMonth()==this.fechaPublicacion.getMonth()) {	
+						if(t.fechaPublicacion.getDay()>this.fechaPublicacion.getDay()) {
+							noMayor = false;
+						}
+					}
 				}
 			}
 		}
-	
-		
 		return noMayor;
 	}
 	

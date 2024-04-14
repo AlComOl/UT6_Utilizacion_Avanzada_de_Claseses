@@ -15,7 +15,7 @@ public class ContenerdorOrdenado <T extends EsComparable<T>>{
 		datos= new Vector<T>();
 	}
 	
-	/**
+	/**CONSTRUCTOR
 	 * Construye un Contenedor de datos con parámetros de entrada:
 	 * Capacidad int
 	 * @return

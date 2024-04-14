@@ -1,6 +1,12 @@
 package TiposParametrizados;
 import java.util.*;
-
+/*************************
+ * @autor Álvaro Comenge 
+ * 
+ * @fecha 13/03/2024
+ * 
+ * Clase main
+ *************************/
 
 public class TestContenedorOrdenado {
 
@@ -13,7 +19,7 @@ public class TestContenedorOrdenado {
 		Figura f1=new Figura(5);
 		Figura f2=new Figura(3);
 		Figura f3=new Figura(4);
-		nuevaFigura.inserta(new Figura(6));// esto es como hacerlo en paso , pero el obgeto no tiene nombre
+		nuevaFigura.inserta(new Figura(6));// esto es como hacerlo en un paso , pero el obgeto no tiene nombre
 		
 		Empleado e1=new Empleado(3000);
 		Empleado e2=new Empleado(2000);

@@ -1,4 +1,11 @@
 package TiposParametrizados;
+/*************************
+ * @autor Álvaro Comenge 
+ * 
+ * @fecha 13/03/2024
+ * 
+ * Clase Figura
+ *************************/
 // La clase figura implementa el interface EsComparable
 public class Figura implements EsComparable <Figura>{
 

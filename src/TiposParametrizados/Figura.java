@@ -1,21 +1,21 @@
 package TiposParametrizados;
-
+// La clase figura implementa el interface EsComparable
 public class Figura implements EsComparable <Figura>{
 
-	private int lado;
+	private int lado;//atributo 
 	
-	public Figura() {
+	public Figura() {//constructor
 		
 	}
-	public Figura(int lado) {
+	public Figura(int lado) {//constructor parametros
 		this.lado=lado;
 	}
-	
+	@Override
 	public String toString() {
 		
 		return "los lados de la figura son :"+lado;
 	}
-	
+	@Override
 	public int compara (Figura c ){//restar el dato con el objeto 
 		int s=(int)(this.lado-c.lado);
 		

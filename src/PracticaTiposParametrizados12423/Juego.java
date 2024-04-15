@@ -57,9 +57,9 @@ public class Juego implements EsComparable<Juego> {
 		}
 		return noMayor;
 	}
-	
+	@Override
 	public String toString() {
-		return this.nombre;
+		return "Los juegos son :"+this.nombre+"\n"+this.creador+this.distribuidora+"\n"+this.fechaPublicacion;
 	}
 	
 	

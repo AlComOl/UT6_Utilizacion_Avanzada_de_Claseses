@@ -41,7 +41,8 @@ public  class ContenedorOrdenado<T extends EsComparable <T>>{
 
 		/*************************
 		 * 
-		 * @return todos los dat
+		 * @return todos los datos del ContenedorOrdenado
+		 * Se sobre escribira en cada clase (figura y empleado)
 		 * 
 		 *************************/
 		public String toString() {

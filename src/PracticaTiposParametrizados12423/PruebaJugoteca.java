@@ -90,7 +90,7 @@ public class PruebaJugoteca {
 			System.out.println(coleccionJuegos.numElementos());
 			break;
 			case 5:
-				System.out.println(coleccionJuegos);	
+				System.out.println(coleccionJuegos.toString()kojj);	
 			break;
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + opcion);

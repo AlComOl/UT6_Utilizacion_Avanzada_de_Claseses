@@ -17,7 +17,12 @@ public class Conversor {
 		this.valor=valor;
 	}
 	
-	
+	/****
+	 * @param formato al que se quiere convertir
+	 * 
+	 * @return devuelve el formato elegido del num introducido
+	 * 
+	 ********/
 	public String  getNumero(int formato) {
 		String res="";
 		

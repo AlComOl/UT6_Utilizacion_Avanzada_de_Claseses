@@ -16,7 +16,10 @@ public class UsoPareja {
 		
 		otra.setPrimero(pers);
 		
-		System.out.println(otra.getPrimero());
+		
+		System.out.println(pers);
+
+		
 		
 
 	}
@@ -29,10 +32,16 @@ public class UsoPareja {
 	
 		private String nombre;
 		
+		public Persona() {
+			
+		}
+		
 		public Persona(String n) {
 			
 			this.nombre=n;
 		}
+		
+		
 		@Override
 		public String toString() {
 			

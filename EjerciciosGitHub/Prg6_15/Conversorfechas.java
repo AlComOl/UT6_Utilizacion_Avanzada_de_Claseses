@@ -1,31 +1,36 @@
 package Prg6_15;
 
-import java.util.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-
-
 public class Conversorfechas {
 	
+	/****************
+	 * dividimos la cadena por el / en 3 partes
+	 * invertimos las 2 primeras posiciones
+	 * 
+	 * @param cadena
+	 * @return fecha modificada
+	 ****************/
 	public String normalToAmericano(String cadena) {
 		
-		SimpleDateFormat s=new SimpleDateFormat("dd/mm/aaaa");
+		String dma[]=cadena.split("/");
 		
-		Date fecha=s.parse(cadena);//cadena a tipo date
-		
-		long operar=fecha.getTime();//obtengo la fecha
-		
-		long modificado=operar-(7 * 60 * 60 * 1000);//le resto 7 horas
-		
-		Date s1= new Date(modificado);//lo meto en el tipo date
-		
-		SimpleDateFormat s2=new SimpleDateFormat("dd/mm/aaaa");
-		
-		String res=s2.format(s2);
-		
-		return res;
-		
+		return dma[1]+"/"+dma[0]+"/"+dma[2];
 		
 	}
+	/****************
+	 * dividimos la cadena por el / en 3 partes
+	 * invertimos las 2 primeras posiciones
+	 * 
+	 * @param cadena
+	 * @return fecha modificada
+	 ****************/
+	public String AmericanoToNormal(String cadena) {
+			
+			String dma[]=cadena.split("/");
+			
+			return dma[1]+"/"+dma[0]+"/"+dma[2];
+			
+		}
+
+	
 
 }

@@ -31,7 +31,7 @@ public class Prg_6_16 {
 		
 		try {
 		
-			div=n/n1;
+			div=n/n1;//como es susceptible de tener la excepcion aqui
 			mod=n%n1;
 			
 		} catch (ArithmeticException e) {

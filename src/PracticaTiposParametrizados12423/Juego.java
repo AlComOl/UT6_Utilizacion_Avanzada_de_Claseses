@@ -57,6 +57,26 @@ public class Juego implements EsComparable<Juego> {
 		}
 		return noMayor;
 	}
+	/*REFACTORIZADA
+	 * public boolean mayorQue(Juego t) {
+			    boolean resultado = true;
+			
+			    if (t.fechaPublicacion.getYear() > this.fechaPublicacion.getYear()) {
+			        resultado = false;
+			    } else if (t.fechaPublicacion.getYear() == this.fechaPublicacion.getYear()) {
+			        if (t.fechaPublicacion.getMonthValue() > this.fechaPublicacion.getMonthValue()) {
+			            resultado = false;
+			        } else if (t.fechaPublicacion.getMonthValue() == this.fechaPublicacion.getMonthValue()) {
+			            resultado = t.fechaPublicacion.getDayOfMonth() > this.fechaPublicacion.getDayOfMonth();
+			        }
+			    }
+			    
+			    return resultado;
+			}
+	 * 
+	 */
+	
+	
 	@Override
 	public String toString() {
 		return "Los juegos son :"+this.nombre+"\n"+this.creador+this.distribuidora+"\n"+this.fechaPublicacion;

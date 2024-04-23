@@ -4,7 +4,7 @@ public class Prueba {
 	public static void main(String[] args) {
 		boolean continuar = true;
 		int dato;
-		ContenedorOrdenado<Entero>miContenedor = new ContenedorOrdenado<Entero>();
+		ContenedorOrdenado<Policias>miContenedor = new ContenedorOrdenado<Policias>();
 	
 		int pos;
 		while (continuar) {

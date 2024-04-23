@@ -1,14 +1,14 @@
-package PRG_6_TiposParametrizados;
+package PRG_6_TiposParametrizados_Version_Genericos;
 
 import java.util.Vector;
 
-public class ContenedorInteger {
-	private Vector<Integer> datos;//lo datos del vector son de tipo integer.
+public class ContenedorOrdenado<T> {
+	private Vector<Integer> datos;
 	/** Construye un Contenedor de datos por defecto
 	* de 10 elementos
 	*
 	*/
-	public ContenedorInteger() {
+	public ContenedorOrdenado() {
 	datos= new Vector<Integer>();
 	}
 	/**
@@ -16,7 +16,7 @@ public class ContenedorInteger {
 	* Capacidad int
 	* @return
 	*/
-	public ContenedorInteger(int cap){
+	public ContenedorOrdenado(int cap){
 	datos= new Vector<Integer>(cap);
 	}
 	/**
@@ -119,4 +119,3 @@ public class ContenedorInteger {
 	return pos;
 	}
 	}
-

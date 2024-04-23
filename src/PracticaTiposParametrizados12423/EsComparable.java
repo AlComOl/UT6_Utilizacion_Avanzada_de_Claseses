@@ -4,7 +4,7 @@ public interface EsComparable<T> {
 	
 	public boolean mayorQue(T t);
 
-	public <T extends EsComparable<T>> int compara(T d);
+//	public <T extends EsComparable<T>> int compara(T d);
 
 	
 

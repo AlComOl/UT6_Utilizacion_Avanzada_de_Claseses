@@ -1,9 +1,9 @@
 package PRG_6_TiposParametrizados_Version_Genericos;
 import java.util.Date; 
-public class Policias {
+public class Policias implements EsComparable6<Policias>{
 	
-	private Policias nombre;
-	private Date fecha;
+	private String nombre;
+	private int edad;
 	
 	
 	
@@ -11,18 +11,19 @@ public class Policias {
 		
 	}
 	
-	public Policias(Policias n, Date d) {
+	public Policias(String n,int e) {
 		this.nombre=n;
+		this.edad=e;
 	}
 	
-	public Policias compara(Policias n) {
+	public int compara(Policias n) {
 		
-		if(!this.nombre.equals(n)) {
-			if(this.fecha.after(fecha)) {
-				
-			}
-		}
-		return n;
+		return	this.edad-n.edad;
+		
+	}
+	
+	public String toString() {
+		return " "+nombre + " "+" "+edad;
 	}
 
 }

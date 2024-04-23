@@ -2,14 +2,14 @@ package PRG_6_TiposParametrizados_Version_Genericos;
 
 import java.util.Vector;
 
-public class ContenedorOrdenado<T> {
-	private Vector<Integer> datos;
+public class ContenedorOrdenado<T extends EsComparable6 <T>> {
+	private Vector<T> datos;
 	/** Construye un Contenedor de datos por defecto
 	* de 10 elementos
 	*
 	*/
 	public ContenedorOrdenado() {
-	datos= new Vector<Integer>();
+	datos= new Vector<T>();
 	}
 	/**
 	* Construye un Contenedor de datos con parámetros de entrada:
@@ -17,7 +17,7 @@ public class ContenedorOrdenado<T> {
 	* @return
 	*/
 	public ContenedorOrdenado(int cap){
-	datos= new Vector<Integer>(cap);
+	datos= new Vector<T>(cap);
 	}
 	/**
 	* Nos indica si el contenedor esta o no lleno
@@ -34,12 +34,12 @@ public class ContenedorOrdenado<T> {
 	* @param dato
 	* @return booleano: Si se puede anyadir o no el dato al contenedor
 	*/
-	public boolean anyadeDatoOrdenado(int dato){
+	public boolean anyadeDatoOrdenado(T dato){
 	boolean ok=false;
 	
 	int i=0;
-	while (i<datos.size() && (dato>datos.elementAt(i)) ){
-	i++;
+	while (i<datos.size() && (dato.compara(datos.elementAt(i))>0)){
+		i++;
 	}
 	datos.add(i,dato);
 	ok= true;
@@ -51,27 +51,19 @@ public class ContenedorOrdenado<T> {
 	* @param pos posición del elemento que queremos obtener
 	* @return el elemento que está en esa posición
 	*/
-	public int getDatoPos(int pos){
-	int res;
+	public T getDatoPos(int pos){
+	T res;
 	res= datos.elementAt(pos);
 	return res;
 	}
-	/**
-	* Metodo para obtener el dato que está en una determinada posición
-	* @param pos posición del elemento que queremos obtener
-	* @return el elemento que está en esa posición
-	*/
-	public int obtenerDatoPos(int pos){
-	int res;
-	res= datos.elementAt(pos);
-	return res;
-	}
+	
+
 	/**
 	* Método para eliminar un dato del contenedor
 	* @param dato que queremos eliminar del contenedor
 	*/
 	public void eliminarDato(int dato){
-	datos.removeElement(dato);
+	datos.remove(dato);
 	}
 	/**
 	* Método que devuelve el número de datos actuales
@@ -93,11 +85,11 @@ public class ContenedorOrdenado<T> {
 	* @param dato a buscar
 	* @return booleano indicando si el dato se encuentra o no en el contenedor.
 	*/
-	public boolean buscarDato(int dato){
+	public boolean buscarDato(T dato){
 	boolean esta= false;
 	int i=0;
-	while ((i<datos.size())&&(dato!=datos.elementAt(i)))
-	i++;
+	while ((i<datos.size())&&(dato.compara(datos.elementAt(i))!=0))
+		i++;
 	//Elemento esta en el vector
 	if (i<datos.size())
 	esta= true;
@@ -108,11 +100,11 @@ public class ContenedorOrdenado<T> {
 	* @param dato a buscar
 	* @return entero indicando si la posicion del dato en el contenedor, -1 si no esta
 	*/
-	public int buscarDatoPos(int dato){
+	public int buscarDatoPos(T dato){
 	int pos=-1;
 	int i=0;
-	while ((i<datos.size())&&(dato!=datos.elementAt(i)))
-	i++;
+	while ((i<datos.size())&&(dato.compara(datos.elementAt(i))!=0))
+		i++;
 	//Elemento esta en el vector
 	if (i<datos.size())
 	pos=i;

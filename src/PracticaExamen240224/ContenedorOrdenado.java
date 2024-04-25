@@ -1,4 +1,4 @@
-package Practica240424;
+package PracticaExamen240224;
 
 import java.util.Vector;
 
@@ -38,7 +38,7 @@ public class ContenedorOrdenado<T extends EsComparable <T>> {
 	boolean ok=false;
 	
 	int i=0;
-	while (i<datos.size() && (dato.compara(datos.elementAt(i))>0)){
+	while (i<datos.size() && (dato.compara(datos.elementAt(i))<0)){
 		i++;
 	}
 	datos.add(i,dato);
@@ -62,8 +62,9 @@ public class ContenedorOrdenado<T extends EsComparable <T>> {
 	* Método para eliminar un dato del contenedor
 	* @param dato que queremos eliminar del contenedor
 	*/
-	public void eliminarDato(T dato){
-	datos.remove(dato);
+	public void eliminarDato( T elemento){
+
+	datos.remove(elemento);
 	}
 	/**
 	* Método que devuelve el número de datos actuales
@@ -88,7 +89,7 @@ public class ContenedorOrdenado<T extends EsComparable <T>> {
 	public boolean buscarDato(T dato){
 	boolean esta= false;
 	int i=0;
-	while ((i<datos.size())&&(dato.compara(datos.elementAt(i))!=0))
+	while ((i<datos.size())&&(dato.compara(datos.elementAt(i))<0))
 		i++;
 	//Elemento esta en el vector
 	if (i<datos.size())

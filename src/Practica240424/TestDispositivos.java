@@ -57,29 +57,32 @@ public class TestDispositivos {
 			case 2:
 				System.out.println("Introduce Dispositivo a eliminar:");
 				
-				 d = new Dispositivo();
-				 sc.nextLine(); // Limpia el buffer del scanner
-	                System.out.println("Introduce el nombre del Dispositivo:");
-	                 nombre = sc.nextLine();
-	                System.out.println("Introduce el modelo del Dispositivo :");
-	                 modelo = sc.nextInt();
-	                 sc.nextLine();
-	                System.out.println("Introduce la descripcion del Dispositivo:");
-	                 descripcion = sc.nextLine();
-	                System.out.println("Introduce la fecha de publicación del Dispositivo (en formato dd-MM-yyyy):");
-	                
-	                System.out.println("Introduce dia:");
-	                dia = sc.nextInt();
-	                System.out.println("Introduce mes:");
-	                mes = sc.nextInt();   
-	                System.out.println("Introduce anyo:");
-	                anyo = sc.nextInt();   
-	                
-	                 fecha = new Date(anyo,mes,dia);
-	                
-	                 d = new Dispositivo(nombre, modelo, descripcion,fecha);
-	                 
-	                 if(ateca.buscarDato(d)==true) {//si esta lo borro 
+//				 d = new Dispositivo();
+//				 sc.nextLine(); // Limpia el buffer del scanner
+//	                System.out.println("Introduce el nombre del Dispositivo:");
+//	                 nombre = sc.nextLine();
+//	                System.out.println("Introduce el modelo del Dispositivo :");
+//	                 modelo = sc.nextInt();
+//	                 sc.nextLine();
+//	                System.out.println("Introduce la descripcion del Dispositivo:");
+//	                 descripcion = sc.nextLine();
+//	                System.out.println("Introduce la fecha de publicación del Dispositivo (en formato dd-MM-yyyy):");
+//	                
+//	                System.out.println("Introduce dia:");
+//	                dia = sc.nextInt();
+//	                System.out.println("Introduce mes:");
+//	                mes = sc.nextInt();   
+//	                System.out.println("Introduce anyo:");
+//	                anyo = sc.nextInt();   
+//	                
+//	                 fecha = new Date(anyo,mes,dia);
+//	                
+//	                 d = new Dispositivo(nombre, modelo, descripcion,fecha);
+                 	System.out.println("Introduce Id  del Dispositivo:");
+                 	int id = sc.nextInt();
+                 	d=ateca.getDatoPos(id-1);
+						
+	                if(d!=null) {
 	                	 ateca.eliminarDato(d);
 	                 }else {
 	                	 System.out.println("El Dispositivo no esta en la coleccion");

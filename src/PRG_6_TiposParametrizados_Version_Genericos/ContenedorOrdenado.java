@@ -2,7 +2,7 @@ package PRG_6_TiposParametrizados_Version_Genericos;
 
 import java.util.Vector;
 
-public class ContenedorOrdenado<T extends EsComparable6 <T>> {
+public class ContenedorOrdenado<T extends EsComparable6<T>> {
 	private Vector<T> datos;
 	/** Construye un Contenedor de datos por defecto
 	* de 10 elementos

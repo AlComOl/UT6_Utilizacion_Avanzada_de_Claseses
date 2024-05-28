@@ -1,4 +1,5 @@
 package PRG_6_TiposParametrizados_Version_Genericos;
+
 public class Prueba {
 
 	public static void main(String[] args) {

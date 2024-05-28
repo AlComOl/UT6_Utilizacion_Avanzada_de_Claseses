@@ -1,5 +1,7 @@
 package Apuntes;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 public class ClaseDate{
 //	public static void main(String [] args){
@@ -17,12 +19,19 @@ public class ClaseDate{
 //	System.out.print(":");
 //	System.out.print(c.get(Calendar.SECOND));
 //	}
-	public static void main(String[] args) {
-		Date h=new Date();
-		String hoystr=DateFormat.getDateTimeInstance().format(h);
-		System.out.println(" la hora de hoy es: " + hoystr);
-		String d=hoystr.substring(hoystr.length()-8,hoystr.length());
-		System.out.println(" la hora de hoy es: " +d );
+	public static void main(String[] args) throws ParseException {
+//		Date h=new Date();
+//		String hoystr=DateFormat.getDateTimeInstance().format(h);
+//		System.out.println(" la hora de hoy es: " + hoystr);
+//		String d=hoystr.substring(hoystr.length()-8,hoystr.length());
+//		System.out.println(" la hora de hoy es: " +d );
+		
+		DateFormat df =new SimpleDateFormat("dd-MM-yy");
+		
+		
+		
+		Date date=df.parse("12-03-23");
+		System.out.println(df.format(date));
 		
 		}
 	}
